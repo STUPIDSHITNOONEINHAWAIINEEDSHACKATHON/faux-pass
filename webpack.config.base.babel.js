@@ -1,7 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.join(__dirname, 'src', 'faux-pass.js'),
+  entry: [
+    'babel-polyfill',
+    path.join(__dirname, 'src', 'faux-pass.js'),
+  ],
   module: {
     rules: [
       {
@@ -25,6 +28,9 @@ module.exports = {
       'node_modules',
     ],
     extensions: ['.js', '.json'],
+  },
+  node: {
+    fs: 'empty',
   },
   plugins: [],
   externals: {},

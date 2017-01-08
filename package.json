@@ -9,9 +9,10 @@
   },
   "main": "faux-pass.js",
   "scripts": {
-    "build": "npm run clean && npm run bundle",
+    "build": "npm run clean && npm run bundle && npm run copy",
     "bundle": "webpack --config webpack.config.base.babel.js",
     "clean": "rimraf dist",
+    "copy": "copyfiles -u 1 src/icons/*.png src/manifest.json dist",
     "test:unit": "mocha --compilers js:babel-register \"**/*.spec.js\""
   },
   "repository": {
@@ -28,18 +29,25 @@
     "babel-core": "6.21.0",
     "babel-eslint": "7.1.1",
     "babel-loader": "^6.2.10",
+    "babel-plugin-transform-async-to-generator": "6.16.0",
+    "babel-polyfill": "6.20.0",
     "babel-preset-es2015": "6.18.0",
     "chai": "3.5.0",
+    "copyfiles": "1.0.0",
     "eslint": "3.13.0",
     "eslint-config-airbnb-base": "11.0.0",
     "eslint-import-resolver-webpack": "0.8.0",
+    "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-import": "2.2.0",
+    "faker": "3.1.0",
     "json-loader": "0.5.4",
     "mocha": "3.2.0",
-    "rimraf": "^2.5.4",
+    "rimraf": "2.5.4",
     "webpack": "2.1.0-beta.25"
   },
   "dependencies": {
+    "jquery": "3.1.1",
+    "keycode": "2.1.8",
     "webdriverio": "4.6.1"
   }
 }

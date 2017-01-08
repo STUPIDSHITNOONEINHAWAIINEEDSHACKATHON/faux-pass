@@ -1,9 +1,18 @@
 {
   "parser": "babel-eslint",
   "extends": "airbnb-base",
+  "plugins": [
+    "async-await",
+    "import",
+    "transform-async-to-generator"
+  ],
   "env": {
     "browser": true,
     "mocha": true
+  },
+  "rules": {
+    "async-await/space-after-async": 2,
+    "async-await/space-after-await": 2
   },
   "settings": {
     "import/resolver": {
@@ -11,8 +20,5 @@
         "config": "webpack.config.base.js"
       }
     }
-  },
-  "plugins": [
-    "import"
-  ]
+  }
 }

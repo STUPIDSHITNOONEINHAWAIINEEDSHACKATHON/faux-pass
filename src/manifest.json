@@ -1,0 +1,21 @@
+{
+  "name": "Faux Pass",
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "homepage_url": "https://github.com/STUPIDSHITNOONEINHAWAIINEEDSHACKATHON/faux-pass",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["faux-pass.js"]
+    }
+  ],
+  "permissions": [
+    "background",
+    "tabs"
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "128": "icons/128.png"
+  }
+}
